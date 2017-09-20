@@ -1,0 +1,6 @@
+sfx menu data/menu.wav
+sfx bullet data/bullet.wav
+sfx jump data/jump.wav
+sfx lost_life data/lost_life.wav
+sfx next_level data/next_level.wav
+sfx success data/success.wav

@@ -1,0 +1,87 @@
+# Project: Gra platformowa
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Aabb.o Application.o Creature.o CreatureFactory.o Game.o WallOfGlory.o Level.o LevelChoice.o main.o Menu.o Player.o Visualization.o AddScore.o Sound.o Sprite.o Configurator.o SpriteGrid.o SpritePool.o Text.o Convert.o $(RES)
+LINKOBJ  = Aabb.o Application.o Creature.o CreatureFactory.o Game.o WallOfGlory.o Level.o LevelChoice.o main.o Menu.o Player.o Visualization.o AddScore.o Sound.o Sprite.o Configurator.o SpriteGrid.o SpritePool.o Text.o Convert.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Users/wojtek/Desktop/Dev/SDL-devel-1.2.15-mingw32/SDL-1.2.15/lib" -L"C:/Users/wojtek/Desktop/Dev/boost_1_41_0/boost_1_41_0/libs" -mwindows -lmingw32 -lSDLmain -lSDL -mwindows -lopengl32 -lSDL_mixer   
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/Users/wojtek/Desktop/Dev/SDL-devel-1.2.15-mingw32/SDL-1.2.15/include"  -I"C:/Users/wojtek/Desktop/Dev/boost_1_41_0/boost_1_41_0" 
+BIN  = "Gra platformowa.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Gra platformowa.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Gra platformowa.exe" $(LIBS)
+
+Aabb.o: Aabb.cpp
+	$(CPP) -c Aabb.cpp -o Aabb.o $(CXXFLAGS)
+
+Application.o: Application.cpp
+	$(CPP) -c Application.cpp -o Application.o $(CXXFLAGS)
+
+Creature.o: Creature.cpp
+	$(CPP) -c Creature.cpp -o Creature.o $(CXXFLAGS)
+
+CreatureFactory.o: CreatureFactory.cpp
+	$(CPP) -c CreatureFactory.cpp -o CreatureFactory.o $(CXXFLAGS)
+
+Game.o: Game.cpp
+	$(CPP) -c Game.cpp -o Game.o $(CXXFLAGS)
+
+WallOfGlory.o: WallOfGlory.cpp
+	$(CPP) -c WallOfGlory.cpp -o WallOfGlory.o $(CXXFLAGS)
+
+Level.o: Level.cpp
+	$(CPP) -c Level.cpp -o Level.o $(CXXFLAGS)
+
+LevelChoice.o: LevelChoice.cpp
+	$(CPP) -c LevelChoice.cpp -o LevelChoice.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+Visualization.o: Visualization.cpp
+	$(CPP) -c Visualization.cpp -o Visualization.o $(CXXFLAGS)
+
+AddScore.o: AddScore.cpp
+	$(CPP) -c AddScore.cpp -o AddScore.o $(CXXFLAGS)
+
+Sound.o: Sound.cpp
+	$(CPP) -c Sound.cpp -o Sound.o $(CXXFLAGS)
+
+Sprite.o: Sprite.cpp
+	$(CPP) -c Sprite.cpp -o Sprite.o $(CXXFLAGS)
+
+Configurator.o: Configurator.cpp
+	$(CPP) -c Configurator.cpp -o Configurator.o $(CXXFLAGS)
+
+SpriteGrid.o: SpriteGrid.cpp
+	$(CPP) -c SpriteGrid.cpp -o SpriteGrid.o $(CXXFLAGS)
+
+SpritePool.o: SpritePool.cpp
+	$(CPP) -c SpritePool.cpp -o SpritePool.o $(CXXFLAGS)
+
+Text.o: Text.cpp
+	$(CPP) -c Text.cpp -o Text.o $(CXXFLAGS)
+
+Convert.o: Convert.cpp
+	$(CPP) -c Convert.cpp -o Convert.o $(CXXFLAGS)
